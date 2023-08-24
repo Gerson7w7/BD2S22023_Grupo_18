@@ -84,6 +84,7 @@ BEGIN
         BEGIN
             ROLLBACK TRANSACTION;
             SELECT @ErrorMessage AS Error;
+            INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), @ErrorMessage);
         END
         ELSE
         BEGIN
@@ -98,5 +99,6 @@ BEGIN
 
         -- Mandar mensaje de error
         SELECT 'Hubo un error al verificar los datos.' AS Error;
+        INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), 'Hubo un error al verificar los datos.');
     END CATCH;
 END;

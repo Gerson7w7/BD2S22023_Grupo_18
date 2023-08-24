@@ -25,6 +25,7 @@ BEGIN
                     -- Si @CreditsRequired no es válido, deshacer la transacción y mostrar mensaje de error
                     ROLLBACK TRANSACTION;
                     SELECT 'Error: Los créditos del curso deben de ser numérico y mayor a 0.' AS Error;
+                    INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), 'Error: Los créditos del curso deben de ser numérico y mayor a 0.');
                 END;
             END
             ELSE
@@ -32,6 +33,7 @@ BEGIN
                 -- Si Name no es válido, deshacer la transacción y mostrar mensaje de error
                 ROLLBACK TRANSACTION;
                 SELECT 'Error: El nombre del curso debe contener solamente letras.' AS Error;
+                INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), 'Error: El nombre del curso debe contener solamente letras.');
             END;
     END TRY
     BEGIN CATCH
@@ -39,5 +41,6 @@ BEGIN
         ROLLBACK TRANSACTION;
         -- Mandar mensaje de error
         SELECT 'Error: Ha habido un error al crear el curso.' AS Error;
+        INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), 'Error: Ha habido un error al crear el curso.');
     END CATCH;
 END;
