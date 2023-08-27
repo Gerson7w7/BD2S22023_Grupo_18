@@ -1,5 +1,6 @@
 CREATE PROCEDURE practica1.PR5
-    @Name VARCHAR(150),
+	@CodCourse INT,
+    @Name VARCHAR(MAX),
     @CreditsRequired INT
 AS
 BEGIN
@@ -8,13 +9,13 @@ BEGIN
         -- Iniciar la transacción
         BEGIN TRANSACTION; 
             -- Validar Name: Solamente letras
-            IF @Name NOT LIKE '%[^a-zA-Z]%'
+            IF @Name LIKE '%[^a-zA-Z]%'
             BEGIN
                 -- Verificamos que @CreditsRequired sea numérico y mayor a 0
                 IF ISNUMERIC(@CreditsRequired) = 1 AND @CreditsRequired > 0
                 BEGIN
                     -- insertamos el curso
-                    INSERT INTO practica1.Course (Name, CreditsRequired) VALUES (@Name, @CreditsRequired);
+                    INSERT INTO practica1.Course (CodCourse, Name, CreditsRequired) VALUES (@CodCourse, @Name, @CreditsRequired);
                     -- Confirmar la transacción si todo fue exitoso
                     COMMIT TRANSACTION;
                     -- Mandamos mensaje de confirmación 
@@ -40,7 +41,7 @@ BEGIN
         -- Si ocurre algún error, deshacer la transacción
         ROLLBACK TRANSACTION;
         -- Mandar mensaje de error
-        SELECT 'Error: Ha habido un error al crear el curso.' AS Error;
-        INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), 'Error: Ha habido un error al crear el curso.');
+        SELECT 'Error: Id de curso no se puede repetir. Intente con otro.' AS Error;
+        INSERT INTO practica1.HistoryLog([Date], Description) VALUES (GETDATE(), 'Error: Id de curso no se puede repetir. Intente con otro.');
     END CATCH;
 END;

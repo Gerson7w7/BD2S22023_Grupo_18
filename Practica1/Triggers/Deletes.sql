@@ -28,7 +28,7 @@ BEGIN
     SET @Name = CONVERT(VARCHAR(MAX), (SELECT Name FROM DELETED));
 
     DECLARE @Mensaje AS VARCHAR(MAX);
-    SET @Mensaje = 'Se ha eliminado un curso con id: ' + @CodCourse + ', y nombre: ' + @Name;
+    SET @Mensaje = 'Se ha eliminado un curso con id: ' + CAST(@CodCourse AS VARCHAR(36)) + ', y nombre: ' + @Name;
 
     INSERT INTO practica1.HistoryLog([Date], Description)
     VALUES (GETDATE(), @Mensaje);
@@ -68,7 +68,7 @@ BEGIN
     SET @CourseCodCourse = CONVERT(int, (SELECT CourseCodCourse FROM DELETED));
 
     DECLARE @Mensaje AS VARCHAR(MAX);
-    SET @Mensaje = 'Se ha eliminado una asignación de curso al estudiante: ' + CAST(@StudentId AS VARCHAR(36)) + ', al curso: ' + @CourseCodCourse;
+    SET @Mensaje = 'Se ha eliminado una asignación de curso al estudiante: ' + CAST(@StudentId AS VARCHAR(36)) + ', al curso: ' + CAST(@CourseCodCourse AS VARCHAR(36));
 
     INSERT INTO practica1.HistoryLog([Date], Description)
     VALUES (GETDATE(), @Mensaje);
@@ -88,7 +88,7 @@ BEGIN
     SET @CourseCodCourse = CONVERT(int, (SELECT CourseCodCourse FROM DELETED));
 
     DECLARE @Mensaje AS VARCHAR(MAX);
-    SET @Mensaje = 'Se ha eliminado una asignación de tutor al curso: ' + @CourseCodCourse + ', el tutor será: ' + CAST(@TutorId AS VARCHAR(36));
+    SET @Mensaje = 'Se ha eliminado una asignación de tutor al curso: ' + CAST(@CourseCodCourse AS VARCHAR(36)) + ', el tutor será: ' + CAST(@TutorId AS VARCHAR(36));
 
     INSERT INTO practica1.HistoryLog([Date], Description)
     VALUES (GETDATE(), @Mensaje);
@@ -128,7 +128,7 @@ BEGIN
     SET @Credits = CONVERT(int, (SELECT Credits FROM DELETED));
 
     DECLARE @Mensaje AS VARCHAR(MAX);
-    SET @Mensaje = 'Se ha eliminado un perfil de usuario al estudiante: ' + CAST(@UserId AS VARCHAR(36)) + ', con: ' + @Credits + ' créditos';
+    SET @Mensaje = 'Se ha eliminado un perfil de usuario al estudiante: ' + CAST(@UserId AS VARCHAR(36)) + ', con: ' + CAST(@Credits AS VARCHAR(36)) + ' créditos';
 
     INSERT INTO practica1.HistoryLog([Date], Description)
     VALUES (GETDATE(), @Mensaje);

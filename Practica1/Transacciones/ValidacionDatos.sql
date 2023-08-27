@@ -65,7 +65,7 @@ BEGIN
             WHERE RowNum = @CurrentRow;
 
             -- Validar si el nombre solo contiene letras
-            IF @Name LIKE '%[^a-zA-Z]%'
+            IF @Name NOT LIKE '%[^a-zA-Z]%'
             BEGIN
                 SET @ErrorMessage = @ErrorMessage + 'Error en tabla Course, Fila ' + CAST(@CurrentRow AS NVARCHAR(10)) + ': El nombre del curso debería de contener solo letras.' + CHAR(13);
             END;
