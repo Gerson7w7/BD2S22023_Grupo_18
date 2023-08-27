@@ -1,3 +1,4 @@
+USE BD2;
 DROP PROCEDURE IF EXISTS [practica1].[PR1];
 
 CREATE PROCEDURE [practica1].[PR1]
@@ -41,15 +42,17 @@ BEGIN
             INSERT INTO [practica1].[Notification] ([UserId], [Message], [Date])
             VALUES (@UserId, '¡Bienvenido a nuestro sistema!', GETDATE());
             print 'Transacción realizada, bienvenido a nuestro sistema'
+            INSERT INTO practica1.HistoryLog([Date], Description)
+            VALUES (GETDATE(), CONCAT('Se ha registrado un nuevo usuario ', @Email));
             -- Confirmacion de la transaccion
             COMMIT TRANSACTION;
         END TRY
         BEGIN CATCH
-
-            print ERROR_MESSAGE()
-            -- print 'Revirtiendo la transacción'
+            print 'Revirtiendo la transacción'
+            SELECT 'Error: Revirtiendo la transacción' AS Error;
             ROLLBACK TRANSACTION;
             -- Manejo de errores
         END CATCH;
     END;
 END;
+

@@ -1,3 +1,4 @@
+USE BD2
 DROP PROCEDURE IF EXISTS [practica1].[PR2];
 
 create procedure [practica1].[PR2]
@@ -14,6 +15,7 @@ begin
 
 	if @found = 0 begin
 		print 'No existe ningun usuario registrado con ese correo';
+		SELECT 'No existe ningun usuario registrado con ese correo' AS Error;
 		rollback;
 	end
 	else begin
@@ -39,12 +41,16 @@ begin
 			values (@userId, 'Se ha registrado como tutor de un nuevo curso', CAST(GETDATE() as Date));
 
 			print 'Se realizo la transaccion de forma exitosa';
+			INSERT INTO practica1.HistoryLog([Date], Description)
+            VALUES (GETDATE(), CONCAT('Se ha registrado como tutor de un nuevo curso ', @Email));
 			commit;
 		end
 		else
 		begin
 			print 'El curso que intenta asignar no existe';
+			SELECT 'El curso que intenta asignar no existe' AS Error;
 			rollback;
 		end
 	end
 end
+
