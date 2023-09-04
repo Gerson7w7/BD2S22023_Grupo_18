@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CB38E82D-C712-8F3D-39B8-6AB5FC77DAAB" containerWithKeyObject="5D6A61A0-85CE-2EC9-A0F0-300ED9C8CD7C" localFKIndex="26758970-130E-A408-DC93-E778FD08B959" name="ReleaseDates_ReleaseDate_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>ABEE847B-6720-4B54-C5CE-B7CA56C99A6F</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<referredTableLongName>ReleaseDate</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>14F54F20-E607-ADE3-5C97-C02418290448</referredTableID>
+<keyObject>A1A11430-02B1-23C6-E61E-529D422BFB26</keyObject>
+<referredKeyID>A1A11430-02B1-23C6-E61E-529D422BFB26</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>release_date</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="15F5BBED-965A-FFEA-097A-A53AF9FB3BBD" name="Platforms">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:07:56 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="platforms" id="981D1EEC-A74D-3C76-5C2F-F83AF90241CF">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:08:02 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="platform" id="55F2B5D0-C8DC-F58D-AF6A-0B4E287D6780">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:09:24 UTC</createdTime>
+<generatorID>3D1290E1-669A-79A9-86ED-552D03FD6C47</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>15308E5F-17A7-24EB-4BEE-14BDDA55DAB9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="game" id="C48BB0C6-E573-83E5-F1E5-62619343FDDE">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:39:14 UTC</createdTime>
+<generatorID>9C5A37F7-646E-77C7-D62F-BAFD38005F5F</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>29C5F795-FAB6-3902-96A7-6682C83C66A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A725011C-0ED0-DF6A-1101-20C2AE9BB84E" name="Platforms PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:08:25 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>981D1EEC-A74D-3C76-5C2F-F83AF90241CF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

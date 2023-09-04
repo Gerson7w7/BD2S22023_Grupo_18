@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6F4BB949-782A-AA2A-5DFF-2EBF5EF8216F" name="Genres">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-20 02:51:24 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="genres" id="747B9440-E0B2-E899-F30E-DECB281D140E">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-20 02:51:34 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="genre" id="FE06FBE1-14A9-922E-3B56-868D1FCBD225">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-20 02:52:30 UTC</createdTime>
+<generatorID>1885F31A-2D7C-F385-7F9C-8611A79327C5</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>074E62A2-7481-B6B2-BBAC-BACF397F5B0F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="game" id="2ACCCA80-40F0-1B20-2424-B6CCAA1F55FD">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:38:54 UTC</createdTime>
+<generatorID>96F382BB-55B7-2462-D022-3BBFF5B98F0D</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>29C5F795-FAB6-3902-96A7-6682C83C66A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="83A0F19B-CE9C-9480-0025-8BAC940BE7D8" name="Genres PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-20 02:51:42 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>747B9440-E0B2-E899-F30E-DECB281D140E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

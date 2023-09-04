@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E6C084DA-856A-6525-E42A-6F3DFCF71A8B" name="GameEngine">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>662B63F2-7E20-E8BB-25DA-B41124AB6A41</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="game_engine" id="0B262EA0-CC2B-AC7B-FBB5-CB780EEDC2DB">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>971B3161-351B-C5DB-5EAA-E097BD7882D7</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="3667DB72-53F0-5657-DE43-3CAFB46360C1">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>EFC11951-9E4F-F22A-6202-25AE34CC7859</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="6EE698F7-EB9D-501D-3D67-F9258989931C">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>F8CEB557-DEB3-7743-0423-4BEF254641BF</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3DFA8A81-948E-94B2-29F5-4EE05790BB30" name="GameEngine_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>BECA75BC-84F4-23B3-779F-A5EF9168D539</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B262EA0-CC2B-AC7B-FBB5-CB780EEDC2DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

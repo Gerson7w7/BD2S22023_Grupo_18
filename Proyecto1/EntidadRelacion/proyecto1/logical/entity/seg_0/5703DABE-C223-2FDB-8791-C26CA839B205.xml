@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5703DABE-C223-2FDB-8791-C26CA839B205" name="Themes">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:23:56 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="themes" id="9338285A-A6E6-7966-C628-2D28CA3C1978">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:24:01 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="theme" id="EF4AD668-D80C-9E99-8EA8-82E58D4BE38B">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 04:25:12 UTC</createdTime>
+<generatorID>5D983C32-85F4-951E-61EC-39329B97BEE2</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>1DD7EDF4-C5A0-61B5-B244-163495A9BCAD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="game" id="D3D050BA-18B7-8443-1E77-DF012858C43D">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:40:06 UTC</createdTime>
+<generatorID>67502B02-66C0-16C5-8552-DB89CB19FFDA</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>29C5F795-FAB6-3902-96A7-6682C83C66A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C7148FAE-BDFB-C98F-3345-BA9095506747" name="Themes PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:24:06 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9338285A-A6E6-7966-C628-2D28CA3C1978</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7014227D-4FF4-D16E-C8E9-DD292E7A2D9F" name="GameModes">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>9599FF2A-2A0A-892C-BD9C-6C41DD4B7EF7</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="game_modes" id="0148A435-E167-D48B-2B2C-CA15426FE809">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>4A3805AE-8B7D-379B-D930-8AEEFA975A08</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GameMode_game_mode" id="5705657A-509F-9D09-AB8B-1591DF6B5981">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>14447FF2-EA6B-5A4D-AA41-510E870F1A54</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56BE802B-E534-F942-A767-3A61934AC299" referredColumn="1293DC70-0DCE-2A22-B7E4-D75F227E99F5"/>
+</associations>
+</Column>
+<Column name="Games_game" id="97317504-F19C-3731-A610-777199495395">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>77A128C4-0187-E411-B645-062AAF58D77C</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B13FA7E-E9D7-B4B4-6A7F-127E12FA9E98" referredColumn="08BEB7E6-9CD5-2EE6-47F7-B93B05E6E5A0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0519A7C9-52C7-ECBC-E4F3-FF8BAD208D93" name="GameModes_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>98842292-7D32-236D-DDAF-9035FEA59B74</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0148A435-E167-D48B-2B2C-CA15426FE809"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B4807C34-319C-0E58-7EF6-48EAE0981702" name="GameModes_GameMode_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>CA92232D-6D0F-6554-F98A-E5E8322CCAB6</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5705657A-509F-9D09-AB8B-1591DF6B5981"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35C63B5B-7E61-4D34-38D7-B16B35C32A0A" name="GameModes_Games_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>1CDE9BFA-D0F3-E2F0-9799-91A5DC8541BA</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97317504-F19C-3731-A610-777199495395"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

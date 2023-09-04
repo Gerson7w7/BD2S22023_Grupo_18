@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="06A5538A-3B24-BBCC-F0FF-05762AD647D6" containerWithKeyObject="14F54F20-E607-ADE3-5C97-C02418290448" localFKIndex="CC437BF0-A5EB-2688-00B6-52AF6A675838" name="ReleaseDate_RegionEnum_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>4C33A5A7-19CE-AD3E-B47B-80C9CB5407A6</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<referredTableLongName>RegionEnum</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2681B9C1-E1EC-C8AB-2A3B-9EDEAAC730AF</referredTableID>
+<keyObject>15D6EABA-DEF0-8EC8-4B10-56C84C669F0A</keyObject>
+<referredKeyID>15D6EABA-DEF0-8EC8-4B10-56C84C669F0A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>region_enum</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

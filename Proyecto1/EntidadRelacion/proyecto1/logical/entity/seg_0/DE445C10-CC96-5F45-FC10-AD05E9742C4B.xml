@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DE445C10-CC96-5F45-FC10-AD05E9742C4B" name="ReleaseDate">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:17:39 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="release_date" id="70D2DCF9-6292-74F2-F8F0-3EF0F91F7AAA">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:17:58 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date" id="367677BE-1D37-36DB-DBCD-68ED58FE3014">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:18:14 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="region_enum" id="8C590F07-B527-CB2A-5478-40A6631AC1D9">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 04:42:58 UTC</createdTime>
+<generatorID>4C33A5A7-19CE-AD3E-B47B-80C9CB5407A6</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+</engineerTo>
+<referedAttribute>B513E952-3F07-96BA-FE90-4EFF75FD64A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="979D98D9-B7A1-5169-A973-77229E1A4A83" name="ReleaseDate PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:18:12 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>70D2DCF9-6292-74F2-F8F0-3EF0F91F7AAA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

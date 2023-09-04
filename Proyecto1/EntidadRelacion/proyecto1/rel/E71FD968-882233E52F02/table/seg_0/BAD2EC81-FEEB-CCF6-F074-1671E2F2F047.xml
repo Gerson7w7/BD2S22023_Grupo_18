@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BAD2EC81-FEEB-CCF6-F074-1671E2F2F047" name="Genres">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>6F4BB949-782A-AA2A-5DFF-2EBF5EF8216F</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="genres" id="67B65CFD-68EE-8A91-291A-2071955E2B40">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>747B9440-E0B2-E899-F30E-DECB281D140E</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Genre_genre" id="C17BBF23-C8C3-048A-2630-5DE038D625E0">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>FE06FBE1-14A9-922E-3B56-868D1FCBD225</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1252E91C-E099-2870-4026-C8096C368F52" referredColumn="E639AA38-7DAA-6825-C190-EC90D0760E2A"/>
+</associations>
+</Column>
+<Column name="Games_game" id="CB123CA8-8C9D-D2C9-8E47-225482466A08">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>2ACCCA80-40F0-1B20-2424-B6CCAA1F55FD</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA5A9315-C117-4A0F-72E6-3D22F8B795D5" referredColumn="08BEB7E6-9CD5-2EE6-47F7-B93B05E6E5A0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="64AC5AB2-AED2-BB03-9EE4-76049401CD0A" name="Genres_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>83A0F19B-CE9C-9480-0025-8BAC940BE7D8</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67B65CFD-68EE-8A91-291A-2071955E2B40"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F577AA14-5B8D-B9D2-D096-BDBC226C276C" name="Genres_Genre_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>1885F31A-2D7C-F385-7F9C-8611A79327C5</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C17BBF23-C8C3-048A-2630-5DE038D625E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3AB0072-7E95-22DB-DA87-9EEA9083DFFF" name="Genres_Games_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>96F382BB-55B7-2462-D022-3BBFF5B98F0D</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB123CA8-8C9D-D2C9-8E47-225482466A08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

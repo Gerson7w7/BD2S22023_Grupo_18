@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="06AB01A5-2BDE-30FE-A4E3-4D430A0ABD48" containerWithKeyObject="7F0B0F11-6A5F-3CAC-8C44-CADDFE0A66DD" localFKIndex="224078EE-AAAF-437C-7B19-5CFDE6C860D0" name="GameLocalization_Region_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>A4DF3B4F-E4AC-1670-C30E-65E8A0351A44</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<referredTableLongName>Region</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A6C255C2-F1F5-91F4-C41D-0B7F301EC43E</referredTableID>
+<keyObject>FF8612B4-F2CD-FC8F-AA2C-F01C12B5C8FD</keyObject>
+<referredKeyID>FF8612B4-F2CD-FC8F-AA2C-F01C12B5C8FD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>region</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

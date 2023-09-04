@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D6A61A0-85CE-2EC9-A0F0-300ED9C8CD7C" name="ReleaseDates">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>5BDEEE0E-2944-05F9-F809-FF851703A0F7</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="release_dates" id="4C4EB740-8777-90FE-D4E5-CF5F8CC6CFCC">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>D778D96A-CEB8-0A93-1C7C-5935D14D288D</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ReleaseDate_release_date" id="7EFA8107-FBB4-7A10-B3AF-C6735B94D80C">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>DDFF3482-E52C-F687-9DEF-5B97001DF131</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB38E82D-C712-8F3D-39B8-6AB5FC77DAAB" referredColumn="1F9009A9-84FE-2EDB-6C4F-8F0B5A802047"/>
+</associations>
+</Column>
+<Column name="Games_game" id="3A3B1162-2620-F886-9543-21D39633F594">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>B41E69F0-B6C3-CB23-7484-41C4CD94C36F</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF5F96C1-881E-4A32-7EEF-A92E1271B762" referredColumn="08BEB7E6-9CD5-2EE6-47F7-B93B05E6E5A0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="69D98AEC-A241-AD5B-7DFE-773A0C90D16B" name="ReleaseDates_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>0ABEC691-7635-B155-2994-C8920F39280E</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C4EB740-8777-90FE-D4E5-CF5F8CC6CFCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26758970-130E-A408-DC93-E778FD08B959" name="ReleaseDates_ReleaseDate_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>ABEE847B-6720-4B54-C5CE-B7CA56C99A6F</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EFA8107-FBB4-7A10-B3AF-C6735B94D80C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FFD82C6-5330-C7F5-D8EF-76F1D8084CEF" name="ReleaseDates_Games_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:45:09 UTC</createdTime>
+<generatorID>9F982DDA-2782-11A8-F3F7-BDC336B4F3E4</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A3B1162-2620-F886-9543-21D39633F594"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

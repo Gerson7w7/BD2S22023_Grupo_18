@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="36446B05-3822-769B-5668-2BE84C479141" name="PlayerPerspectives">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:10:07 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="player_perspectives" id="4AA75B34-55EA-4B72-093E-7665EBC184A5">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:11:24 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="player_perspective" id="C8BB3878-E56B-8259-B6B5-8504B8C1E302">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 04:26:15 UTC</createdTime>
+<generatorID>0D05FFCA-6728-8EFB-1BDF-ABA14B6E28B3</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>9D5F750E-648F-D31A-01AF-8C49AF01C1A5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="game" id="426B6606-93C9-B240-C829-932D66D8F713">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-02 04:39:28 UTC</createdTime>
+<generatorID>DABE599A-3A72-0767-75FC-94F1B62CC3EB</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>29C5F795-FAB6-3902-96A7-6682C83C66A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="79B071EB-C7B2-FAA4-8BA9-82D062DC1E07" name="PlayerPerspectives PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-08-28 00:11:32 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4AA75B34-55EA-4B72-093E-7665EBC184A5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
