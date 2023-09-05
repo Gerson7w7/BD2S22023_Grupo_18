@@ -4,7 +4,7 @@
 <createdTime>2023-08-20 02:54:11 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,21 +20,8 @@
 <createdTime>2023-08-20 02:54:28 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="company_CREARTABLA" id="4202A311-7B88-D044-8FB4-D1318F712AA6">
-<createdBy>gerso</createdBy>
-<createdTime>2023-08-20 02:54:50 UTC</createdTime>
-<ownerDesignName>proyecto1</ownerDesignName>
-<engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -45,7 +32,7 @@
 <createdTime>2023-08-20 03:00:26 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -59,7 +46,7 @@
 <createdTime>2023-08-20 03:03:07 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -73,7 +60,7 @@
 <createdTime>2023-08-20 03:03:17 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -87,7 +74,7 @@
 <createdTime>2023-08-20 03:03:33 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -96,14 +83,29 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="company" id="7C170CEF-38A8-DCD2-EC30-2D092EC9F0A1">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-05 05:18:31 UTC</createdTime>
+<generatorID>BB87887F-E367-71FA-559B-144D549AAF00</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="true"/>
+</engineerTo>
+<referedAttribute>E1602881-4111-5974-2464-18FC43522173</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="D216A3FD-8B01-95E4-C430-4932F43DF6AC" name="InvolvedCompany PK">
 <createdBy>gerso</createdBy>
 <createdTime>2023-08-20 02:54:49 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="E71FD968-1E6D-FA30-0EBF-882233E52F02" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
