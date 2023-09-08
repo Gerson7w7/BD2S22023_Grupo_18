@@ -70,7 +70,7 @@ CREATE TABLE Company
 (
 	company INT PRIMARY KEY,
     name VARCHAR(255),
-	description VARCHAR(600),
+	description TEXT,
 );
 GO
 
