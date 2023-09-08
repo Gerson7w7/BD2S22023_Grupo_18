@@ -138,3 +138,29 @@ CREATE TABLE GameModes
     FOREIGN KEY (Games_game) REFERENCES Game(game)
 );
 GO
+CREATE TABLE Genre
+(
+	genre 	INT PRIMARY KEY,
+	name	VARCHAR(255)
+)
+CREATE TABLE Genres
+(
+	genres 	INT PRIMARY KEY,
+	genre	INT,
+	game	INT,
+	FOREIGN KEY (genre) REFERENCES Genre(genre),
+	FOREIGN KEY (game) REFERENCES Game(game)
+);
+CREATE TABLE Platform
+(
+	platform	INT PRIMARY KEY,
+	name		VARCHAR(255)
+)
+CREATE TABLE Platforms
+(
+	platforms	INT PRIMARY KEY,
+	platform	INT,
+	game		INT,
+	FOREIGN KEY (platform) REFERENCES Platform(platform),
+	FOREIGN KEY (game) REFERENCES Game(game)
+)

@@ -8,23 +8,11 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="involved_companie" id="11340807-6D68-C4FA-1F5B-2449D7B77B1E">
+<Column name="involved_company" id="11340807-6D68-C4FA-1F5B-2449D7B77B1E">
 <createdBy>gerso</createdBy>
 <createdTime>2023-09-02 04:45:09 UTC</createdTime>
 <generatorID>BF8FC669-B4FA-F271-2CEA-CF0B555E5304</generatorID>
 <ownerDesignName>proyecto1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="company_CREARTABLA" id="B1E640CA-5D5F-7E38-F957-8164A885C08E">
-<createdBy>gerso</createdBy>
-<createdTime>2023-09-02 04:45:09 UTC</createdTime>
-<generatorID>4202A311-7B88-D044-8FB4-D1318F712AA6</generatorID>
-<ownerDesignName>proyecto1</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

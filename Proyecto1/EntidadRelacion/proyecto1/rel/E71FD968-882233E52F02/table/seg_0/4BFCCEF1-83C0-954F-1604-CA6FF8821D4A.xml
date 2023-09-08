@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="InvolvedCompany_involved_companie" id="F9E09BCA-5739-C1BA-29D0-7E9B0829682F">
+<Column name="involved_company" id="F9E09BCA-5739-C1BA-29D0-7E9B0829682F">
 <createdBy>gerso</createdBy>
 <createdTime>2023-09-02 04:45:09 UTC</createdTime>
 <generatorID>2F418CB4-6161-82C4-18AC-BCEDFE478B9D</generatorID>
