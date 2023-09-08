@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DD6930B7-A89F-F622-C0B0-BB8F6407DA86" name="RegionEnum">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>38BA4262-DFC9-5063-49CC-3D3CB22923A9</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="region_enum" id="6EBE1591-A7EF-4355-DD16-C4F119F16DC7">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>B513E952-3F07-96BA-FE90-4EFF75FD64A4</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="ED8DFFDF-1A7F-FE71-7167-9B3B314F87A6">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>6904C0CC-A40F-F7C1-B995-7BB4CCB867E3</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D846B0E0-2B66-4BCA-4A9A-1B48060FCE37" name="RegionEnum_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>5E8BB885-C216-B6FA-A287-53B031141258</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EBE1591-A7EF-4355-DD16-C4F119F16DC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9B39B9D-E1A0-A5F0-E466-F850B1F28A90" name="Franchises">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>93029571-752B-1F22-5E4B-29D1F9AEC56B</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="franchises" id="09008E72-DC7B-D097-7BA2-6F8E1ED495C6">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>9B34DB22-3DDC-A877-882E-D2E1AE9DA06A</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Franchise_franchise" id="43221B97-1DDB-9018-F313-884E1BA210C1">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>4143D429-8BEE-7DAB-5E4F-650EEE92F4EA</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF560671-15A6-5EF4-CBFE-54D23798504F" referredColumn="AC8A002F-36AE-D8E4-B51B-B3EADD352DD9"/>
+</associations>
+</Column>
+<Column name="Game_game" id="C697A7BA-F1A4-6344-4057-ED080D36894D">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>D074DDA5-FB47-1F49-FAFD-4ACD18248C15</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFAD6917-2E84-65B2-87EF-E6EA2D7EB41A" referredColumn="BFCEF4B2-0CE4-6E6B-82D9-5E35E491617B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8D51911F-A14D-A131-131B-7C3427C73833" name="Franchises_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>1C413486-8046-E234-CB61-7E342A98CB70</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09008E72-DC7B-D097-7BA2-6F8E1ED495C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4B0DC592-FD52-4C48-F8F3-4317648D1038" name="Franchises_Franchise_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>8F4FB35D-EA74-879A-2D2A-640685A31BA8</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43221B97-1DDB-9018-F313-884E1BA210C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11171469-85DB-82A4-215F-567E0A0EE82E" name="Franchises_Game_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>E952899F-4916-EB2A-71C8-21B2A1AC8990</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C697A7BA-F1A4-6344-4057-ED080D36894D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6861D62-8F30-52B5-1DBC-86DFC58351B5" name="GameLocalization">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>2DC20321-7BD2-5DEF-9FE8-27BD837C8166</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="game_localization" id="6E7F72E1-C380-22EC-3961-E9FAA2537787">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>1540A36B-4CCE-F049-D17F-43E913551A0A</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="CBA30A5E-82C7-2D95-280F-C87DD0BF9AFA">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>2A0B3F39-457D-A1B5-7529-4C18B04B17DA</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Region_region" id="07C0A16C-68D6-AFE5-B31E-DCBB29F16FA8">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>1E463099-4683-5C46-1579-4DB81403500D</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7FA149E5-6A09-CB49-A86A-0EEAA630E807" referredColumn="5020EB4E-B07C-4306-8CE0-E5702C4BE1E3"/>
+</associations>
+</Column>
+<Column name="Game_game" id="EE271417-A6CE-8152-319D-61BDD32B5DAE">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>91B903E1-34C7-C47C-0645-DA862B6F097A</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="447728ED-E64B-E511-D2FC-5276D837AD79" referredColumn="BFCEF4B2-0CE4-6E6B-82D9-5E35E491617B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F800DCC2-F634-6ECE-8DFD-4330A8A167DD" name="GameLocalization_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>7AC5E148-3D7A-5321-0722-EB55B2336145</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E7F72E1-C380-22EC-3961-E9FAA2537787"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="251B6773-4AE8-59BC-07DC-321AF25F9CF9" name="GameLocalization_Game_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>C16E799A-9CC0-C607-5789-7B172BD64E66</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE271417-A6CE-8152-319D-61BDD32B5DAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ABC7CFC2-1611-ECFA-84DF-442BAB647F7F" name="GameLocalization_Region_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>A4DF3B4F-E4AC-1670-C30E-65E8A0351A44</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07C0A16C-68D6-AFE5-B31E-DCBB29F16FA8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

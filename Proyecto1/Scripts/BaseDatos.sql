@@ -164,3 +164,18 @@ CREATE TABLE Platforms
 	FOREIGN KEY (platform) REFERENCES Platform(platform),
 	FOREIGN KEY (game) REFERENCES Game(game)
 )
+CREATE TABLE GameLocalization
+(
+    game_localization INT PRIMARY KEY,
+    name              VARCHAR(255),
+    region            INT, 
+    FOREIGN KEY (region) REFERENCES Region(region)
+)   
+CREATE TABLE GameLocalizations
+(
+    game_localizations INT PRIMARY KEY,
+    game_localization  INT,
+    game               INT,
+    FOREIGN KEY (game_localization) REFERENCES GameLocalization(game_localization)
+    FOREIGN KEY (game) REFERENCES Game(game)
+)   

@@ -4,7 +4,7 @@
 <createdTime>2023-08-28 00:17:39 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2023-08-28 00:17:58 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,8 +32,9 @@
 <createdTime>2023-08-28 00:18:14 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
@@ -45,13 +46,41 @@
 <generatorID>4C33A5A7-19CE-AD3E-B47B-80C9CB5407A6</generatorID>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
 <referedAttribute>B513E952-3F07-96BA-FE90-4EFF75FD64A4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="game" id="462CDBE7-4B98-2645-1AA7-C482401F313A">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 16:59:39 UTC</createdTime>
+<generatorID>BE275883-F952-B895-C813-C985789B061B</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
+</engineerTo>
+<referedAttribute>29C5F795-FAB6-3902-96A7-6682C83C66A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="human" id="37EE29BA-4FFF-1BA0-A6F9-695772E054FD">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:03:39 UTC</createdTime>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -60,7 +89,7 @@
 <createdTime>2023-08-28 00:18:12 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
-<item key="9552CB8F-4F29-4424-24E1-622A50FF8F03" value="true"/>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

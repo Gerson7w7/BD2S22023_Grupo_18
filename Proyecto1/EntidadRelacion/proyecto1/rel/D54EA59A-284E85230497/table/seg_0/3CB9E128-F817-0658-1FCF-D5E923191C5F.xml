@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3CB9E128-F817-0658-1FCF-D5E923191C5F" name="PlayerPerspectives">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>36446B05-3822-769B-5668-2BE84C479141</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="player_perspectives" id="EEA2A24C-C223-000F-1D42-5224722B7564">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>4AA75B34-55EA-4B72-093E-7665EBC184A5</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PlayerPerspective_player_perspective" id="66CEB88C-2649-45C9-44AC-AE24674EEEB8">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>C8BB3878-E56B-8259-B6B5-8504B8C1E302</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="69CF5B1E-F901-21CC-47B1-EAC5179A6ADF" referredColumn="3CB7B495-8294-65F4-224E-AEEF63C068D4"/>
+</associations>
+</Column>
+<Column name="Game_game" id="F9C2AC7B-4037-2D0E-BA6A-DA449B87F882">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>426B6606-93C9-B240-C829-932D66D8F713</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F05C6754-7D47-669A-B5C8-81A9249D9134" referredColumn="BFCEF4B2-0CE4-6E6B-82D9-5E35E491617B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A4BAFD1-9B69-6B9A-B54C-7B13CCC89004" name="PlayerPerspectives_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>79B071EB-C7B2-FAA4-8BA9-82D062DC1E07</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEA2A24C-C223-000F-1D42-5224722B7564"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E24847B8-B4D8-C509-47A5-72835CB44CEA" name="PlayerPerspectives_PlayerPerspective_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>0D05FFCA-6728-8EFB-1BDF-ABA14B6E28B3</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66CEB88C-2649-45C9-44AC-AE24674EEEB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="381F1785-CB4C-3FB9-3040-9E2250AFEE8A" name="PlayerPerspectives_Game_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-08 17:07:24 UTC</createdTime>
+<generatorID>DABE599A-3A72-0767-75FC-94F1B62CC3EB</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9C2AC7B-4037-2D0E-BA6A-DA449B87F882"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
