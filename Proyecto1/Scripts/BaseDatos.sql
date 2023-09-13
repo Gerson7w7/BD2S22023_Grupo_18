@@ -164,18 +164,66 @@ CREATE TABLE Platforms
 	FOREIGN KEY (platform) REFERENCES Platform(platform),
 	FOREIGN KEY (game) REFERENCES Game(game)
 )
-CREATE TABLE GameLocalization
-(
-    game_localization INT PRIMARY KEY,
-    name              VARCHAR(255),
-    region            INT, 
-    FOREIGN KEY (region) REFERENCES Region(region)
-)   
-CREATE TABLE GameLocalizations
-(
-    game_localizations INT PRIMARY KEY,
-    game_localization  INT,
-    game               INT,
-    FOREIGN KEY (game_localization) REFERENCES GameLocalization(game_localization)
-    FOREIGN KEY (game) REFERENCES Game(game)
-)   
+
+GO
+CREATE TABLE RegionEnum (
+	region_enum		INT PRIMARY KEY,
+	name			VARCHAR(255)
+)
+GO
+INSERT INTO RegionEnum (region_enum, name) VALUES
+	(1, 'europe'),
+	(2, 'north_america'),
+	(3, 'australia'),
+	(4, 'new_zealand'),
+	(5, 'japan'),
+	(6, 'china'),
+	(7, 'asia'),
+	(8, 'worldwide'),
+	(9, 'korea'),
+	(10, 'brazil')
+GO
+CREATE TABLE ReleaseDate (
+	release_date	INT PRIMARY KEY,
+	date			DATE NULL,
+	region_enum		INT NOT NULL,
+	game			INT NOT NULL,
+	human			VARCHAR(255),
+	FOREIGN KEY (region_enum) REFERENCES RegionEnum(region_enum),
+	FOREIGN KEY (game) REFERENCES Game(game)
+)
+GO
+CREATE TABLE Theme (
+	theme	INT PRIMARY KEY,
+	name	VARCHAR(255)
+)
+GO
+CREATE TABLE Themes (
+	theme	INT NOT NULL,
+	game	INT NOT NULL,
+	PRIMARY KEY (theme, game)
+	FOREIGN KEY (theme) REFERENCES Theme(theme),
+	FOREIGN KEY (game) REFERENCES Game(game)
+)
+GO
+CREATE TABLE Region (
+	region	INT PRIMARY KEY,
+	name	VARCHAR(255)
+)
+GO
+CREATE TABLE GameLocalization (
+	game_localization	INT PRIMARY KEY,
+	name				NVARCHAR(255),
+	region				INT,
+	game				INT,
+	FOREIGN KEY (region) REFERENCES Region(region),
+	FOREIGN KEY (game) REFERENCES Game(game)
+)
+GO
+CREATE TABLE AlternativeName (
+	alternative_name	INT PRIMARY KEY,
+	name				VARCHAR(255) NOT NULL,
+	game				INT NOT NULL,
+	FOREIGN KEY (game) REFERENCES Game(game)
+)
+GO
