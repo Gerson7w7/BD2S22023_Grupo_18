@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const sql = require("mssql");
 
 const url = "https://api.igdb.com/v4";
-let cont = 24031;
+let cont = 105047;
 const config = {
   user: "sqlserver",
   password: "bd2g18",
@@ -39,177 +39,199 @@ async function insertMuchosAMuchos(data, pool) {
     for (const item of data) {
       let i = 0;
       const game = item.id;
-      const involved_companies = item.involved_companies ? item.involved_companies : null;
+      const involved_companies = item.involved_companies
+        ? item.involved_companies
+        : null;
       const platforms = item.platforms ? item.platforms : null;
-      const player_perspectives = item.player_perspectives ? item.player_perspectives : null;
+      const player_perspectives = item.player_perspectives
+        ? item.player_perspectives
+        : null;
       const game_modes = item.game_modes ? item.game_modes : null;
       const game_engines = item.game_engines ? item.game_engines : null;
       const franchises = item.franchises ? item.franchises : null;
 
       const request = new sql.Request(pool);
       request.input("game", sql.Int, game);
-      if (involved_companies != null){
-        for (const involved_company of involved_companies) {
-          request.input(`involved_company${i}`, sql.Int, involved_company);
-  
-          // Verificar si ya existe en la base de datos
-          let checkQuery = `SELECT COUNT(*) AS count FROM InvolvedCompanies WHERE game = @game AND involved_company = @involved_company${i}`;
-          let checkResult = await request.query(checkQuery);
-  
-          if (checkResult.recordset[0].count === 0) {
+      // Verificar si ya existe en la base de datos
+      let checkQuery = `SELECT COUNT(*) AS count FROM Game WHERE game = @game`;
+      let checkResult = await request.query(checkQuery);
+
+      if (checkResult.recordset[0].count !== 0) {
+        if (involved_companies != null) {
+          for (const involved_company of involved_companies) {
+            request.input(`involved_company${i}`, sql.Int, involved_company);
+
             // Verificar si ya existe en la base de datos
-            checkQuery = `SELECT COUNT(*) AS count FROM InvolvedCompany WHERE involved_company = @involved_company${i}`;
+            checkQuery = `SELECT COUNT(*) AS count FROM InvolvedCompanies WHERE game = @game AND involved_company = @involved_company${i}`;
             checkResult = await request.query(checkQuery);
-            if (checkResult.recordset[0].count !== 0) {
-              const query = `INSERT INTO InvolvedCompanies (involved_company, game) VALUES (@involved_company${i}, @game)`;
-              await request.query(query);
-    
+
+            if (checkResult.recordset[0].count === 0) {
+              // Verificar si ya existe en la base de datos
+              checkQuery = `SELECT COUNT(*) AS count FROM InvolvedCompany WHERE involved_company = @involved_company${i}`;
+              checkResult = await request.query(checkQuery);
+              if (checkResult.recordset[0].count !== 0) {
+                const query = `INSERT INTO InvolvedCompanies (involved_company, game) VALUES (@involved_company${i}, @game)`;
+                await request.query(query);
+
+                console.log(
+                  `Insertado el involved companies: Juego ${game}, Involved_company ${involved_company}`
+                );
+              }
               console.log(
-                `Insertado el involved companies: Juego ${game}, Involved_company ${involved_company}`
+                `involved company no encontrado: Juego ${game}, Involved_company ${involved_company}`
+              );
+            } else {
+              console.log(
+                `Involved companies duplicado encontrado: Juego ${game}, Involved_company ${involved_company}`
               );
             }
-            console.log(
-              `involved company no encontrado: Juego ${game}, Involved_company ${involved_company}`
-            );
-          } else {
-            console.log(
-              `Involved companies duplicado encontrado: Juego ${game}, Involved_company ${involved_company}`
-            );
+            i++;
           }
-          i++;
         }
-      }
 
-      if (platforms != null){
-        i = 0;
-        for (const platform of platforms) {
-          request.input(`platform${i}`, sql.Int, platform);
-  
-          // Verificar si ya existe en la base de datos
-          let checkQuery = `SELECT COUNT(*) AS count FROM Platforms WHERE game = @game AND platform = @platform${i}`;
-          let checkResult = await request.query(checkQuery);
-  
-          if (checkResult.recordset[0].count === 0) {
-            const query = `INSERT INTO Platforms (platform, game) VALUES (@platform${i}, @game)`;
-            await request.query(query);
-  
-            console.log(
-              `Insertado el platform: Juego ${game}, platform ${platform}`
-            );
-          } else {
-            console.log(
-              `platform duplicado encontrado: Juego ${game}, platform ${platform}`
-            );
-          }
-          i++;
-        }
-      }
+        if (platforms != null) {
+          i = 0;
+          for (const platform of platforms) {
+            request.input(`platform${i}`, sql.Int, platform);
 
-      if (player_perspectives != null){
-        i = 0;
-        for (const player_perspective of player_perspectives) {
-          request.input(`player_perspective${i}`, sql.Int, player_perspective);
-  
-          // Verificar si ya existe en la base de datos
-          let checkQuery = `SELECT COUNT(*) AS count FROM PlayerPerspectives WHERE game = @game AND player_perspective = @player_perspective${i}`;
-          let checkResult = await request.query(checkQuery);
-  
-          if (checkResult.recordset[0].count === 0) {
-            const query = `INSERT INTO PlayerPerspectives (player_perspective, game) VALUES (@player_perspective${i}, @game)`;
-            await request.query(query);
-  
-            console.log(
-              `Insertado el player_perspective: Juego ${game}, player_perspective ${player_perspective}`
-            );
-          } else {
-            console.log(
-              `player_perspective duplicado encontrado: Juego ${game}, player_perspective ${player_perspective}`
-            );
-          }
-          i++;
-        }
-      }
-
-      if (game_modes != null){
-        i = 0;
-        for (const game_mode of game_modes) {
-          request.input(`game_mode${i}`, sql.Int, game_mode);
-  
-          // Verificar si ya existe en la base de datos
-          let checkQuery = `SELECT COUNT(*) AS count FROM GameModes WHERE game = @game AND game_mode = @game_mode${i}`;
-          let checkResult = await request.query(checkQuery);
-  
-          if (checkResult.recordset[0].count === 0) {
-            const query = `INSERT INTO GameModes (game_mode, game) VALUES (@game_mode${i}, @game)`;
-            await request.query(query);
-  
-            console.log(
-              `Insertado el game_mode: Juego ${game}, game_mode ${game_mode}`
-            );
-          } else {
-            console.log(
-              `game_mode duplicado encontrado: Juego ${game}, game_mode ${game_mode}`
-            );
-          }
-          i++;
-        }
-      }
-
-      if (game_engines != null){
-        i = 0;
-        for (const game_engine of game_engines) {
-          request.input(`game_engine${i}`, sql.Int, game_engine);
-  
-          // Verificar si ya existe en la base de datos
-          let checkQuery = `SELECT COUNT(*) AS count FROM GameEngines WHERE game = @game AND game_engine = @game_engine${i}`;
-          let checkResult = await request.query(checkQuery);
-  
-          if (checkResult.recordset[0].count === 0) {
-            const query = `INSERT INTO GameEngines (game_engine, game) VALUES (@game_engine${i}, @game)`;
-            await request.query(query);
-  
-            console.log(
-              `Insertado el game_engine: Juego ${game}, game_engine ${game_engine}`
-            );
-          } else {
-            console.log(
-              `game_engine duplicado encontrado: Juego ${game}, game_engine ${game_engine}`
-            );
-          }
-          i++;
-        }
-      }
-
-      if (franchises != null){
-        i = 0;
-        for (const franchise of franchises) {
-          request.input(`franchise${i}`, sql.Int, franchise);
-  
-          // Verificar si ya existe en la base de datos
-          let checkQuery = `SELECT COUNT(*) AS count FROM Franchises WHERE game = @game AND franchise = @franchise${i}`;
-          let checkResult = await request.query(checkQuery);
-  
-          if (checkResult.recordset[0].count === 0) {
             // Verificar si ya existe en la base de datos
-            checkQuery = `SELECT COUNT(*) AS count FROM Franchise WHERE franchise = @franchise${i}`;
-            checkResult = await request.query(checkQuery);
-            if (checkResult.recordset[0].count !== 0) {
-              const query = `INSERT INTO Franchises (franchise, game) VALUES (@franchise${i}, @game)`;
-              await request.query(query);
-    
+            let checkQuery = `SELECT COUNT(*) AS count FROM Platforms WHERE game = @game AND platform = @platform${i}`;
+            let checkResult = await request.query(checkQuery);
+
+            if (checkResult.recordset[0].count === 0) {
+              // Verificar si ya existe en la base de datos
+              checkQuery = `SELECT COUNT(*) AS count FROM Platform WHERE platform = @platform${i}`;
+              checkResult = await request.query(checkQuery);
+              if (checkResult.recordset[0].count !== 0) {
+                const query = `INSERT INTO Platforms (platform, game) VALUES (@platform${i}, @game)`;
+                await request.query(query);
+
+                console.log(
+                  `Insertado el platform: Juego ${game}, platform ${platform}`
+                );
+              }
               console.log(
-                `Insertado el franchise: Juego ${game}, franchise ${franchise}`
+                `platform no encontrado: Juego ${game}, platform ${platform}`
+              );
+            } else {
+              console.log(
+                `platform duplicado encontrado: Juego ${game}, platform ${platform}`
               );
             }
-            console.log(
-              `franchise no encontrado: Juego ${game}, franchise ${franchise}`
-            );
-          } else {
-            console.log(
-              `franchise duplicado encontrado: Juego ${game}, franchise ${franchise}`
-            );
+            i++;
           }
-          i++;
+        }
+
+        if (player_perspectives != null) {
+          i = 0;
+          for (const player_perspective of player_perspectives) {
+            request.input(
+              `player_perspective${i}`,
+              sql.Int,
+              player_perspective
+            );
+
+            // Verificar si ya existe en la base de datos
+            let checkQuery = `SELECT COUNT(*) AS count FROM PlayerPerspectives WHERE game = @game AND player_perspective = @player_perspective${i}`;
+            let checkResult = await request.query(checkQuery);
+
+            if (checkResult.recordset[0].count === 0) {
+              const query = `INSERT INTO PlayerPerspectives (player_perspective, game) VALUES (@player_perspective${i}, @game)`;
+              await request.query(query);
+
+              console.log(
+                `Insertado el player_perspective: Juego ${game}, player_perspective ${player_perspective}`
+              );
+            } else {
+              console.log(
+                `player_perspective duplicado encontrado: Juego ${game}, player_perspective ${player_perspective}`
+              );
+            }
+            i++;
+          }
+        }
+
+        if (game_modes != null) {
+          i = 0;
+          for (const game_mode of game_modes) {
+            request.input(`game_mode${i}`, sql.Int, game_mode);
+
+            // Verificar si ya existe en la base de datos
+            let checkQuery = `SELECT COUNT(*) AS count FROM GameModes WHERE game = @game AND game_mode = @game_mode${i}`;
+            let checkResult = await request.query(checkQuery);
+
+            if (checkResult.recordset[0].count === 0) {
+              const query = `INSERT INTO GameModes (game_mode, game) VALUES (@game_mode${i}, @game)`;
+              await request.query(query);
+
+              console.log(
+                `Insertado el game_mode: Juego ${game}, game_mode ${game_mode}`
+              );
+            } else {
+              console.log(
+                `game_mode duplicado encontrado: Juego ${game}, game_mode ${game_mode}`
+              );
+            }
+            i++;
+          }
+        }
+
+        if (game_engines != null) {
+          i = 0;
+          for (const game_engine of game_engines) {
+            request.input(`game_engine${i}`, sql.Int, game_engine);
+
+            // Verificar si ya existe en la base de datos
+            let checkQuery = `SELECT COUNT(*) AS count FROM GameEngines WHERE game = @game AND game_engine = @game_engine${i}`;
+            let checkResult = await request.query(checkQuery);
+
+            if (checkResult.recordset[0].count === 0) {
+              const query = `INSERT INTO GameEngines (game_engine, game) VALUES (@game_engine${i}, @game)`;
+              await request.query(query);
+
+              console.log(
+                `Insertado el game_engine: Juego ${game}, game_engine ${game_engine}`
+              );
+            } else {
+              console.log(
+                `game_engine duplicado encontrado: Juego ${game}, game_engine ${game_engine}`
+              );
+            }
+            i++;
+          }
+        }
+
+        if (franchises != null) {
+          i = 0;
+          for (const franchise of franchises) {
+            request.input(`franchise${i}`, sql.Int, franchise);
+
+            // Verificar si ya existe en la base de datos
+            let checkQuery = `SELECT COUNT(*) AS count FROM Franchises WHERE game = @game AND franchise = @franchise${i}`;
+            let checkResult = await request.query(checkQuery);
+
+            if (checkResult.recordset[0].count === 0) {
+              // Verificar si ya existe en la base de datos
+              checkQuery = `SELECT COUNT(*) AS count FROM Franchise WHERE franchise = @franchise${i}`;
+              checkResult = await request.query(checkQuery);
+              if (checkResult.recordset[0].count !== 0) {
+                const query = `INSERT INTO Franchises (franchise, game) VALUES (@franchise${i}, @game)`;
+                await request.query(query);
+
+                console.log(
+                  `Insertado el franchise: Juego ${game}, franchise ${franchise}`
+                );
+              }
+              console.log(
+                `franchise no encontrado: Juego ${game}, franchise ${franchise}`
+              );
+            } else {
+              console.log(
+                `franchise duplicado encontrado: Juego ${game}, franchise ${franchise}`
+              );
+            }
+            i++;
+          }
         }
       }
     }
