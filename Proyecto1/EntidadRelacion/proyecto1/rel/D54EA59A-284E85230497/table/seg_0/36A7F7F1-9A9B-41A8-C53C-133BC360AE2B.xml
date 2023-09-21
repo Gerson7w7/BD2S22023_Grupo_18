@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36A7F7F1-9A9B-41A8-C53C-133BC360AE2B" name="LanguageSupport">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>35EBD538-8C7E-AA88-9F31-B912FB843C22</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="language_support" id="986C3206-DCAB-9D42-3AC7-B1CC8B452B92">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>1A2A1796-3A1D-348C-17CB-B543BC718BEE</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Game_game" id="61D2A931-48E6-4772-B9F9-E3DB0CA8E288">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>AD1D99E7-FDDA-24BD-1192-17BD9B2AE67C</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E22EA2E9-4F74-83EB-4549-DCA19F2CE7DD" referredColumn="BFCEF4B2-0CE4-6E6B-82D9-5E35E491617B"/>
+</associations>
+</Column>
+<Column name="Language_language" id="E2C1A9BE-7229-D19C-5DD8-DD0C17C961E6">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>AB933F1B-D4FB-AB37-2BF8-12F755747EAB</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8A5C57A-0ADD-5EAE-A087-D4F1151A3983" referredColumn="DC49239B-1947-3177-586F-89EBFC532495"/>
+</associations>
+</Column>
+<Column name="LanguageSupportType_language_support_type" id="461C0D99-4091-4166-659A-6CEE58DA10BF">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>BE277265-2348-C10C-9DF5-8D331BADB6CD</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C458A546-DA31-067C-A6E9-7123C860FE38" referredColumn="28E7C23B-29FE-FFD1-F330-BEC1A5807BD1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BEECA25-96F2-E0EE-676D-B92EC062D440" name="LanguageSupport_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>7817A349-3A79-AB48-77E9-8EB323B08E6B</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="986C3206-DCAB-9D42-3AC7-B1CC8B452B92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0464D9AD-FF4C-095C-E4FF-23132FD1DAF0" name="LanguageSupport_Game_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>3432ED68-2611-0AC2-25BD-CAA4A474AF62</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61D2A931-48E6-4772-B9F9-E3DB0CA8E288"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A8F0E36-B377-8241-7015-B99298C43147" name="LanguageSupport_Language_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>EE74B64E-797D-6CF4-4242-E4D4046437AE</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2C1A9BE-7229-D19C-5DD8-DD0C17C961E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE513FB8-43EE-9E9E-AD81-E7AD17D47328" name="LanguageSupport_LanguageSupportType_FK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>38D55E27-36A5-0929-9E83-3A344CD2E477</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="461C0D99-4091-4166-659A-6CEE58DA10BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

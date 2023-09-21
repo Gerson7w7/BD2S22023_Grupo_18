@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="15AACB24-892B-B246-6A08-C0B1FC88C7B0" name="Language">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>AD3FD686-6B6B-FF7C-04B1-CD0372E24AB7</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="language" id="DC49239B-1947-3177-586F-89EBFC532495">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>47C59006-F48B-B4EA-7CF5-5E79CAA4C4A8</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="61672BF8-0772-52F3-5CA8-EB3548120CF0">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>B80DF5F9-5410-2250-B8EB-F11CA2D53192</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="native_name" id="6D390C1E-FBA0-482D-0EDE-235503648BAF">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>00CE6AF1-3E35-BE43-C09B-DEB066FA1535</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36E758B6-0152-9329-A1E2-52F68FCDCD83" name="Language_PK">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:55 UTC</createdTime>
+<generatorID>2F82BBD6-3F9B-D37E-CCEE-EB614BC8F1F2</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC49239B-1947-3177-586F-89EBFC532495"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

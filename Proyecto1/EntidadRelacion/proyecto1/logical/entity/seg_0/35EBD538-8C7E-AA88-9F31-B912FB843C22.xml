@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DE445C10-CC96-5F45-FC10-AD05E9742C4B" name="ReleaseDate">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="35EBD538-8C7E-AA88-9F31-B912FB843C22" name="LanguageSupport">
 <createdBy>gerso</createdBy>
-<createdTime>2023-08-28 00:17:39 UTC</createdTime>
+<createdTime>2023-09-20 15:08:45 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
 <item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="release_date" id="70D2DCF9-6292-74F2-F8F0-3EF0F91F7AAA">
+<Attribute name="language_support" id="1A2A1796-3A1D-348C-17CB-B543BC718BEE">
 <createdBy>gerso</createdBy>
-<createdTime>2023-08-28 00:17:58 UTC</createdTime>
+<createdTime>2023-09-20 15:10:00 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
 <item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
@@ -27,37 +27,10 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="date" id="367677BE-1D37-36DB-DBCD-68ED58FE3014">
+<Attribute name="game" id="AD1D99E7-FDDA-24BD-1192-17BD9B2AE67C">
 <createdBy>gerso</createdBy>
-<createdTime>2023-08-28 00:18:14 UTC</createdTime>
-<ownerDesignName>proyecto1</ownerDesignName>
-<engineerTo>
-<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="region_enum" id="8C590F07-B527-CB2A-5478-40A6631AC1D9">
-<createdBy>gerso</createdBy>
-<createdTime>2023-08-28 04:42:58 UTC</createdTime>
-<generatorID>4C33A5A7-19CE-AD3E-B47B-80C9CB5407A6</generatorID>
-<ownerDesignName>proyecto1</ownerDesignName>
-<engineerTo>
-<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
-</engineerTo>
-<referedAttribute>B513E952-3F07-96BA-FE90-4EFF75FD64A4</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="game" id="462CDBE7-4B98-2645-1AA7-C482401F313A">
-<createdBy>gerso</createdBy>
-<createdTime>2023-09-08 16:59:39 UTC</createdTime>
-<generatorID>BE275883-F952-B895-C813-C985789B061B</generatorID>
+<createdTime>2023-09-20 15:12:22 UTC</createdTime>
+<generatorID>3432ED68-2611-0AC2-25BD-CAA4A474AF62</generatorID>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
 <item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
@@ -68,33 +41,46 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="human" id="37EE29BA-4FFF-1BA0-A6F9-695772E054FD">
+<Attribute name="language" id="AB933F1B-D4FB-AB37-2BF8-12F755747EAB">
 <createdBy>gerso</createdBy>
-<createdTime>2023-09-08 17:03:39 UTC</createdTime>
+<createdTime>2023-09-20 15:15:01 UTC</createdTime>
+<generatorID>EE74B64E-797D-6CF4-4242-E4D4046437AE</generatorID>
 <ownerDesignName>proyecto1</ownerDesignName>
 <engineerTo>
 <item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>47C59006-F48B-B4EA-7CF5-5E79CAA4C4A8</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="language_support_type" id="BE277265-2348-C10C-9DF5-8D331BADB6CD">
+<createdBy>gerso</createdBy>
+<createdTime>2023-09-20 15:24:23 UTC</createdTime>
+<generatorID>38D55E27-36A5-0929-9E83-3A344CD2E477</generatorID>
+<ownerDesignName>proyecto1</ownerDesignName>
+<engineerTo>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
+</engineerTo>
+<referedAttribute>9CB0FDAA-9E05-C67D-DF43-3E2EFF6C53D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="979D98D9-B7A1-5169-A973-77229E1A4A83" name="ReleaseDate PK">
+<identifier id="7817A349-3A79-AB48-77E9-8EB323B08E6B" name="LanguageSupports PK">
 <createdBy>gerso</createdBy>
-<createdTime>2023-08-28 00:18:12 UTC</createdTime>
+<createdTime>2023-09-20 15:10:11 UTC</createdTime>
 <ownerDesignName>proyecto1</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="false"/>
+<item key="D54EA59A-F2DF-311A-2C03-284E85230497" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>70D2DCF9-6292-74F2-F8F0-3EF0F91F7AAA</attributeRef>
+<attributeRef>1A2A1796-3A1D-348C-17CB-B543BC718BEE</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

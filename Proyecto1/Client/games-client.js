@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const sql = require("mssql");
 
 const url = "https://api.igdb.com/v4";
-let cont = 105047;
+let cont = 175070;
 const config = {
   user: "sqlserver",
   password: "bd2g18",
@@ -52,11 +52,11 @@ async function insertMuchosAMuchos(data, pool) {
 
       const request = new sql.Request(pool);
       request.input("game", sql.Int, game);
-      // Verificar si ya existe en la base de datos
-      let checkQuery = `SELECT COUNT(*) AS count FROM Game WHERE game = @game`;
-      let checkResult = await request.query(checkQuery);
+      // // Verificar si ya existe en la base de datos
+      // let checkQuery = `SELECT COUNT(*) AS count FROM Game WHERE game = @game`;
+      // let checkResult = await request.query(checkQuery);
 
-      if (checkResult.recordset[0].count !== 0) {
+      // if (checkResult.recordset[0].count !== 0) {
         if (involved_companies != null) {
           for (const involved_company of involved_companies) {
             request.input(`involved_company${i}`, sql.Int, involved_company);
@@ -233,7 +233,7 @@ async function insertMuchosAMuchos(data, pool) {
             i++;
           }
         }
-      }
+      // }
     }
     return 1;
   } catch (error) {
