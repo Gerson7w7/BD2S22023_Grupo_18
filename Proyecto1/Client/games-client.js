@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const sql = require("mssql");
 
 const url = "https://api.igdb.com/v4";
-let cont = 196603;
+let cont = 198209;
 const config = {
   user: "sqlserver",
   password: "bd2g18",
