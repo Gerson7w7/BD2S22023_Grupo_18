@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const sql = require('mssql');
 
 const url = "https://api.igdb.com/v4";
-let cont = 21556;
+let cont = 0;
 
 const config = {
   user: 'sqlserver',
@@ -114,6 +114,31 @@ async function insertThemes(data, pool) {
     }
 }
 
+async function insertGenres(data, pool) {
+    try {
+        for (const item of data) {
+            const game = item.id
+            const genres = item.genres;
+
+            if (genres) {
+                const request = new sql.Request(pool);
+                request.input('game', sql.Int, game);
+                let query = 'INSERT INTO Genres (genre, game) VALUES'
+                if (genres.length > 0) {
+                    for (let i = 0; i < genres.length; i++) {
+                        request.input(`genre${i}`, sql.Int, genres[i]);
+                        query += (i > 0)? `, (@genre${i}, @game)`:`(@genre${i}, @game)`;
+                    }
+                    await request.query(query);
+                }
+            }
+            cont = game;
+        }
+    } catch (error) {
+        console.error('Error al insertar datos: ', error);
+    }
+}
+
 async function insertRegion(data, pool) {
     try {
         for (const item of data) {
@@ -189,7 +214,7 @@ async function main() {
             //const data = await obtenerData('themes', 'name');
 
             //-------------- Themes ---------------
-            const data = await obtenerData('games', 'themes');
+            //const data = await obtenerData('games', 'themes');
 
             //-------------- Game_Localizations ---------------
             //const data = await obtenerData('game_localizations', 'name, region, game');
@@ -197,14 +222,18 @@ async function main() {
             //-------------- Alternative_Names ---------------
             //const data = await obtenerData('alternative_names', 'name, game');
 
+            //-------------- Genres ---------------
+            const data = await obtenerData('games', 'genres');
+
             if (data.length === 0) break; // Si la lista viene vacía se termina el while
 
             //await insertReleaseDates(data, pool);
             //await insertTheme(data, pool);
-            await insertThemes(data, pool);
+            //await insertThemes(data, pool);
             //await insertRegion(data, pool);
             //await insertGamesLocalizations(data, pool);
             //await insertAlternativeNames(data, pool);
+            await insertGenres(data, pool)
 
             cont += 1;
 
