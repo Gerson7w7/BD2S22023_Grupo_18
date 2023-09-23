@@ -159,3 +159,34 @@ BEGIN
 END;
 
 EXEC InfoJuego 'Counter-Strike: Global Offensive';
+
+-- Stored procedure que reciba un parámetro alfanumérico para buscar juegos por nombre (palabras o aproximaciones). 
+IF OBJECT_ID('BuscarJuegosPorNombre', 'P') IS NOT NULL
+BEGIN
+    DROP PROCEDURE BuscarJuegosPorNombre;
+END;
+GO
+CREATE PROCEDURE BuscarJuegosPorNombre
+    @nombreJuego NVARCHAR(255)
+AS
+BEGIN
+    SELECT DISTINCT
+        G.name AS NombreDelJuego,
+        G.rating AS Rating,
+        G.first_release_date AS FechaDeLanzamiento,
+        STUFF((
+            SELECT ', ' + Genre.name
+            FROM Genres GG
+            INNER JOIN Genre ON GG.genre = Genre.genre
+            WHERE GG.game = G.game
+            FOR XML PATH('')), 1, 2, '') AS Generos,
+        STUFF((
+            SELECT ', ' + Franchise.name
+            FROM Franchises GF
+            INNER JOIN Franchise ON GF.franchise = Franchise.franchise
+            WHERE GF.game = G.game
+            FOR XML PATH('')), 1, 2, '') AS Franquicias
+    FROM Game G
+    WHERE G.name LIKE '%' + @nombreJuego + '%';
+END;
+EXEC BuscarJuegosPorNombre @nombreJuego = 'Legend';

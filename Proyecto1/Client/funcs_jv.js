@@ -345,13 +345,160 @@ async function getPlayerPerspectives() {
 }
 
 
+async function getLanguages() {
+    const igdbUrl = 'https://api.igdb.com/v4/languages';
+    let ini = 0;
+
+    while (true) {
+        const igdbSearchParams = `fields: *; limit: 500; offset 0; sort id asc; where id >${ini};`;
+
+        try {
+            const pool = await sql.connect(config);
+            await autenticar();
+            const igdbResponse = await axios.post(igdbUrl, igdbSearchParams, { headers: igdbHeaders });
+
+            if (igdbResponse.status === 200) {
+                const games = igdbResponse.data;
+
+                if (games.length === 0) {
+                    break; // Salir del bucle si no hay más resultados
+                }
+
+                for (const game of games) {
+                    const request = new sql.Request(pool);
+                    request.input('id', sql.Int, game.id);
+                    request.input('name', sql.VarChar(255), game.name);
+                    request.input('native_name', sql.VarChar(255), game.native_name);
+
+                    const query = `
+                        INSERT INTO Languages (language, name, native_name)
+                        VALUES (@id, @name, @native_name)
+                    `;
+                    await request.query(query);
+                    console.log(game.id)
+                }
+
+                ini = games[games.length - 1].id;
+                await sleep(4000);
+            } else {
+                console.log(`Error al realizar la solicitud a IGDB: ${igdbResponse.status}`);
+                break; // Salir del bucle en caso de error
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            break; // Salir del bucle en caso de error
+        } finally {
+            sql.close();
+        }
+    }
+}
+
+async function getLanguageSupportType() {
+    const igdbUrl = 'https://api.igdb.com/v4/language_support_types';
+    let ini = 0;
+
+    while (true) {
+        const igdbSearchParams = `fields: *; limit: 500; offset 0; sort id asc; where id >${ini};`;
+
+        try {
+            const pool = await sql.connect(config);
+            await autenticar();
+            const igdbResponse = await axios.post(igdbUrl, igdbSearchParams, { headers: igdbHeaders });
+
+            if (igdbResponse.status === 200) {
+                const games = igdbResponse.data;
+
+                if (games.length === 0) {
+                    break; // Salir del bucle si no hay más resultados
+                }
+
+                for (const game of games) {
+                    const request = new sql.Request(pool);
+                    request.input('id', sql.Int, game.id);
+                    request.input('name', sql.VarChar(100), game.name);
+
+                    const query = `
+                        INSERT INTO LanguageSupportType (language_support_type, name)
+                        VALUES (@id, @name)
+                    `;
+                    await request.query(query);
+                    console.log(game.id)
+                }
+
+                ini = games[games.length - 1].id;
+                await sleep(4000);
+            } else {
+                console.log(`Error al realizar la solicitud a IGDB: ${igdbResponse.status}`);
+                break; // Salir del bucle en caso de error
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            break; // Salir del bucle en caso de error
+        } finally {
+            sql.close();
+        }
+    }
+}
+
+async function getLanguageSupports() {
+    const igdbUrl = 'https://api.igdb.com/v4/language_supports';
+    let ini = 0;
+
+    while (true) {
+        const igdbSearchParams = `fields: *; limit: 500; offset 0; sort id asc; where id >${ini};`;
+
+        try {
+            const pool = await sql.connect(config);
+            await autenticar();
+            const igdbResponse = await axios.post(igdbUrl, igdbSearchParams, { headers: igdbHeaders });
+
+            if (igdbResponse.status === 200) {
+                const games = igdbResponse.data;
+
+                if (games.length === 0) {
+                    break; // Salir del bucle si no hay más resultados
+                }
+
+                for (const game of games) {
+                    const request = new sql.Request(pool);
+                    request.input('id', sql.Int, game.id);
+                    request.input('game', sql.Int, game.game);
+                    request.input('language', sql.Int, game.language);
+                    request.input('language_support_type', sql.Int, game.language_support_type);
+
+                    const query = `
+                        INSERT INTO LanguageSupports (language_supports, Languages_language, Games_game, LanguageSupportType_languageST)
+                        VALUES (@id, @language, @game, @language_support_type)
+                    `;
+                    await request.query(query);
+                    console.log(game.id)
+                }
+
+                ini = games[games.length - 1].id;
+                await sleep(4000);
+            } else {
+                console.log(`Error al realizar la solicitud a IGDB: ${igdbResponse.status}`);
+                break; // Salir del bucle en caso de error
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            break; // Salir del bucle en caso de error
+        } finally {
+            sql.close();
+        }
+    }
+}
+
 async function main() {
     //await getGameModes()
     //await getGameEngines()
     //await getFranchises()
     //await getCompanies()
-    await getInvolvedCompanies()
+    //await getInvolvedCompanies()
     //await getPlayerPerspectives()
+    //await getLanguages();
+    //await getLanguageSupportType();
+    await getLanguageSupports();
 }
 
 main()
