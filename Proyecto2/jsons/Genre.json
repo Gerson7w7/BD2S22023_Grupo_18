@@ -1,0 +1,95 @@
+{
+"Genre": [
+	{
+		"genre" : 2,
+		"name" : "Point-and-click"
+	},
+	{
+		"genre" : 4,
+		"name" : "Fighting"
+	},
+	{
+		"genre" : 5,
+		"name" : "Shooter"
+	},
+	{
+		"genre" : 7,
+		"name" : "Music"
+	},
+	{
+		"genre" : 8,
+		"name" : "Platform"
+	},
+	{
+		"genre" : 9,
+		"name" : "Puzzle"
+	},
+	{
+		"genre" : 10,
+		"name" : "Racing"
+	},
+	{
+		"genre" : 11,
+		"name" : "Real Time Strategy (RTS)"
+	},
+	{
+		"genre" : 12,
+		"name" : "Role-playing (RPG)"
+	},
+	{
+		"genre" : 13,
+		"name" : "Simulator"
+	},
+	{
+		"genre" : 14,
+		"name" : "Sport"
+	},
+	{
+		"genre" : 15,
+		"name" : "Strategy"
+	},
+	{
+		"genre" : 16,
+		"name" : "Turn-based strategy (TBS)"
+	},
+	{
+		"genre" : 24,
+		"name" : "Tactical"
+	},
+	{
+		"genre" : 25,
+		"name" : "Hack and slash\/Beat 'em up"
+	},
+	{
+		"genre" : 26,
+		"name" : "Quiz\/Trivia"
+	},
+	{
+		"genre" : 30,
+		"name" : "Pinball"
+	},
+	{
+		"genre" : 31,
+		"name" : "Adventure"
+	},
+	{
+		"genre" : 32,
+		"name" : "Indie"
+	},
+	{
+		"genre" : 33,
+		"name" : "Arcade"
+	},
+	{
+		"genre" : 34,
+		"name" : "Visual Novel"
+	},
+	{
+		"genre" : 35,
+		"name" : "Card & Board Game"
+	},
+	{
+		"genre" : 36,
+		"name" : "MOBA"
+	}
+]}
