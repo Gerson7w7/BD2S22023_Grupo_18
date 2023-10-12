@@ -1,0 +1,15 @@
+{
+"Region": [
+	{
+		"region" : 2,
+		"name" : "Korea"
+	},
+	{
+		"region" : 3,
+		"name" : "Japan"
+	},
+	{
+		"region" : 4,
+		"name" : "Europe"
+	}
+]}
