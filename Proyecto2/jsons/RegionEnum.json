@@ -1,0 +1,43 @@
+{
+"RegionEnum": [
+	{
+		"region_enum" : 1,
+		"name" : "europe"
+	},
+	{
+		"region_enum" : 2,
+		"name" : "north_america"
+	},
+	{
+		"region_enum" : 3,
+		"name" : "australia"
+	},
+	{
+		"region_enum" : 4,
+		"name" : "new_zealand"
+	},
+	{
+		"region_enum" : 5,
+		"name" : "japan"
+	},
+	{
+		"region_enum" : 6,
+		"name" : "china"
+	},
+	{
+		"region_enum" : 7,
+		"name" : "asia"
+	},
+	{
+		"region_enum" : 8,
+		"name" : "worldwide"
+	},
+	{
+		"region_enum" : 9,
+		"name" : "korea"
+	},
+	{
+		"region_enum" : 10,
+		"name" : "brazil"
+	}
+]}
