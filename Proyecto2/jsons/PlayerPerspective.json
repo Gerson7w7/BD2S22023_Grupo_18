@@ -1,0 +1,31 @@
+{
+"PlayerPerspective": [
+	{
+		"player_perspective" : 1,
+		"name" : "First person"
+	},
+	{
+		"player_perspective" : 2,
+		"name" : "Third person"
+	},
+	{
+		"player_perspective" : 3,
+		"name" : "Bird view \/ Isometric"
+	},
+	{
+		"player_perspective" : 4,
+		"name" : "Side view"
+	},
+	{
+		"player_perspective" : 5,
+		"name" : "Text"
+	},
+	{
+		"player_perspective" : 6,
+		"name" : "Auditory"
+	},
+	{
+		"player_perspective" : 7,
+		"name" : "Virtual Reality"
+	}
+]}
