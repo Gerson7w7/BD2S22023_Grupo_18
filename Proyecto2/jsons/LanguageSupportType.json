@@ -1,0 +1,15 @@
+{
+"LanguageSupportType": [
+	{
+		"language_support_type" : 1,
+		"name" : "Audio"
+	},
+	{
+		"language_support_type" : 2,
+		"name" : "Subtitles"
+	},
+	{
+		"language_support_type" : 3,
+		"name" : "Interface"
+	}
+]}
