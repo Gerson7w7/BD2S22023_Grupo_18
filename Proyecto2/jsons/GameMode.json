@@ -1,0 +1,27 @@
+{
+"GameMode": [
+	{
+		"game_mode" : 1,
+		"name" : "Single player"
+	},
+	{
+		"game_mode" : 2,
+		"name" : "Multiplayer"
+	},
+	{
+		"game_mode" : 3,
+		"name" : "Co-operative"
+	},
+	{
+		"game_mode" : 4,
+		"name" : "Split screen"
+	},
+	{
+		"game_mode" : 5,
+		"name" : "Massively Multiplayer Online (MMO)"
+	},
+	{
+		"game_mode" : 6,
+		"name" : "Battle Royale"
+	}
+]}
