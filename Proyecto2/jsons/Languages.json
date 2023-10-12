@@ -1,0 +1,143 @@
+{
+"Languages": [
+	{
+		"language" : 1,
+		"name" : "Arabic",
+		"native_name" : "???????"
+	},
+	{
+		"language" : 2,
+		"name" : "Chinese (Simplified)",
+		"native_name" : "????"
+	},
+	{
+		"language" : 3,
+		"name" : "Chinese (Traditional)",
+		"native_name" : "????"
+	},
+	{
+		"language" : 4,
+		"name" : "Czech",
+		"native_name" : "?eština"
+	},
+	{
+		"language" : 5,
+		"name" : "Danish",
+		"native_name" : "Dansk"
+	},
+	{
+		"language" : 6,
+		"name" : "Dutch",
+		"native_name" : "Nederlands"
+	},
+	{
+		"language" : 7,
+		"name" : "English",
+		"native_name" : "English (US)"
+	},
+	{
+		"language" : 8,
+		"name" : "English (UK)",
+		"native_name" : "English (UK)"
+	},
+	{
+		"language" : 9,
+		"name" : "Spanish (Spain)",
+		"native_name" : "Español (España)"
+	},
+	{
+		"language" : 10,
+		"name" : "Spanish (Mexico)",
+		"native_name" : "Español (Mexico)"
+	},
+	{
+		"language" : 11,
+		"name" : "Finnish",
+		"native_name" : "Suomi"
+	},
+	{
+		"language" : 12,
+		"name" : "French",
+		"native_name" : "Français"
+	},
+	{
+		"language" : 13,
+		"name" : "Hebrew",
+		"native_name" : "?????"
+	},
+	{
+		"language" : 14,
+		"name" : "Hungarian",
+		"native_name" : "Magyar"
+	},
+	{
+		"language" : 15,
+		"name" : "Italian",
+		"native_name" : "Italiano"
+	},
+	{
+		"language" : 16,
+		"name" : "Japanese",
+		"native_name" : "???"
+	},
+	{
+		"language" : 17,
+		"name" : "Korean",
+		"native_name" : "???"
+	},
+	{
+		"language" : 18,
+		"name" : "Norwegian",
+		"native_name" : "Norsk"
+	},
+	{
+		"language" : 19,
+		"name" : "Polish",
+		"native_name" : "Polski"
+	},
+	{
+		"language" : 20,
+		"name" : "Portuguese (Portugal)",
+		"native_name" : "Português (Portugal)"
+	},
+	{
+		"language" : 21,
+		"name" : "Portuguese (Brazil)",
+		"native_name" : "Português (Brasil)"
+	},
+	{
+		"language" : 22,
+		"name" : "Russian",
+		"native_name" : "???????"
+	},
+	{
+		"language" : 23,
+		"name" : "Swedish",
+		"native_name" : "Svenska"
+	},
+	{
+		"language" : 24,
+		"name" : "Turkish",
+		"native_name" : "Türkçe"
+	},
+	{
+		"language" : 25,
+		"name" : "Thai",
+		"native_name" : "???"
+	},
+	{
+		"language" : 26,
+		"name" : "Vietnamese",
+		"native_name" : "Ti?ng Vi?t"
+	},
+	{
+		"language" : 27,
+		"name" : "German",
+		"native_name" : "Deutsch"
+	},
+	{
+		"language" : 28,
+		"name" : "Ukrainian",
+		"native_name" : "??????????"
+	}
+]}
