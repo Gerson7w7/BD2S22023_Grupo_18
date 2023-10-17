@@ -9,6 +9,21 @@ BACKUP DATABASE [Videojuegos]
 TO URL = 's3://storage.googleapis.com/sqlserver_proyecto2/full_backup.bak'
 WITH compression, stats=1;
 
+-- Backup
+BACKUP DATABASE Videojuegos
+TO DISK = '/var/opt/mssql/data/full_backup.bak'
+WITH INIT;
+
+-- Si no deja eliminar base
+USE master;
+ALTER DATABASE Videojuegos SET AUTO_CLOSE OFF;
+DROP DATABASE Videojuegos;
+
+-- Restaurar backup
+RESTORE DATABASE Videojuegos
+FROM DISK = '/var/opt/mssql/data/full_backup.bak'
+WITH RECOVERY;
+
 -- truncar bitácora
 SELECT name, recovery_model_desc FROM sys.databases WHERE name = 'Videojuegos';
 ALTER DATABASE Videojuegos SET RECOVERY FULL;
