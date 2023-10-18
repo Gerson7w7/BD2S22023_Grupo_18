@@ -24,6 +24,16 @@ RESTORE DATABASE Videojuegos
 FROM DISK = '/var/opt/mssql/data/full_backup.bak'
 WITH RECOVERY;
 
+-- Crear base nueva
+USE master;
+CREATE DATABASE Calificacion;
+-- Restaurar backup en base nueva
+RESTORE DATABASE Calificacion
+FROM DISK = '/var/opt/mssql/data/full_backup.bak'
+WITH MOVE 'Videojuegos' TO '/var/opt/mssql/data/Calificacion.mdf',
+    MOVE 'Videojuegos_Log' TO '/var/opt/mssql/data/Calificacion_Log.ldf',
+    REPLACE;
+
 -- truncar bitácora
 SELECT name, recovery_model_desc FROM sys.databases WHERE name = 'Videojuegos';
 ALTER DATABASE Videojuegos SET RECOVERY FULL;
