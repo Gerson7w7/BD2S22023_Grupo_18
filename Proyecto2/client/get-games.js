@@ -641,6 +641,38 @@ function processGamesGenres(genresData, gameData, genreData) {
   });
 }
 
+// Función para procesar los platforms
+function processPlatformsGames(platformsData, gameData, platformData) {
+  platformsData.Platforms.forEach((platforms) => {
+    const foundGame = gameData.Game.find((g) => g.game === platforms.game);
+    if (foundGame) {
+      const foundPlatform = platformData.Platform.find(
+        (p) => p.platform === platforms.platform
+      );
+
+      if (foundPlatform) {
+        foundPlatform.games = foundPlatform.games || [];
+        foundPlatform.games.push(foundGame);
+        console.log(
+          `Juego con ID ${platforms.game} agregado al platform con ID ${platforms.platform}`
+        );
+      } else {
+        console.log(
+          `No se encontró la plataforma con ID ${platforms.platform}`
+        );
+      }
+    } else {
+      console.log(`No se encontró el juego con ID ${platforms.game}`);
+    }
+  });
+
+  writeJSONFile("./outputJsons/platforms.json", platformData, (err) => {
+    if (!err) {
+      console.log('Campo "games" agregado a platforms.json correctamente.');
+    }
+  });
+}
+
 function getChar() {
   console.log("Press any key to continue...");
   let buffer = Buffer.alloc(1);
@@ -655,17 +687,17 @@ function getChar() {
 //   }
 // });
 // Leer el archivo 'genres.json'
-readJSONFile("../jsons/Genres.json", (err, data1) => {
+readJSONFile("../jsons/Platforms.json", (err, data1) => {
   if (!err) {
     // Leer el archivo 'game.json'
-    readJSONFile("./outputJsons/game.json", (err, data2) => {
+    readJSONFile("../jsons/Game.json", (err, data2) => {
       if (!err) {
         // processGameModes(data1, data2);
         // Leer el archivo 'genre.json'
-        readJSONFile("../jsons/Genre.json", (err, data3) => {
+        readJSONFile("../jsons/Platform.json", (err, data3) => {
           if (!err) {
             // Procesar los géneros
-            processGamesGenres(data1, data2, data3);
+            processPlatformsGames(data1, data2, data3);
           }
         });
       }
