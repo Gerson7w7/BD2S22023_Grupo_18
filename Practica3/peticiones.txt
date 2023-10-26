@@ -1,0 +1,71 @@
+// ================================== libros
+GET
+http://localhost:3000/libros/ver
+
+POST
+http://localhost:3000/libros/crear
+{
+    "Id": 21,
+    "Titulo": "Game of Thrones",
+    "Autor": "George R. R. Martin",
+    "Descripcion": "Canción de hielo y fuego.",
+    "FechaDePublicacion": "11/07/1996",
+    "Calificacion": 5,
+    "Stock": 10,
+    "Categoria": "Ficción",
+    "Precio": 300
+}
+
+PUT
+http://localhost:3000/libros/editar/21
+{
+    "Autor": "Gerson Quiroa",
+    "Calificacion": 2,
+    "Stock": 100,
+    "Categoria": "Fantasía"
+}
+
+DELETE
+http://localhost:3000/libros/eliminar/21
+
+// ================================== peliculas
+GET
+http://localhost:3000/peliculas/ver
+
+POST
+http://localhost:3000/peliculas/crear
+{
+    "Titulo": "El Messi",
+    "Genero": "gg",
+    "Pelicula": "100",
+    "Director": "Francis ggggg Coppola",
+    "Descripcion": "La gggg de la familia Corleone y el crimen organizado.",
+    "IdiomaOriginal": "gg",
+    "Precio2": 10.99,
+    "Distribuidora": "gg Pictures",
+    "Calificacion": 5,
+    "FechaDeEstreno": "1972-03-15",
+    "Precio": 11.99,
+    "Clasificacion": "B"
+}
+
+PUT
+http://localhost:3000/peliculas/editar/100
+{
+    "Genero": "Futbol",
+    "Director": "Pep Guardiola",
+    "IdiomaOriginal": "Español",
+    "Precio2": 500,
+    "Calificacion": 100
+}
+
+DELETE
+http://localhost:3000/peliculas/eliminar/100
+
+GETS
+http://localhost:3000/consultas-peliculas/consulta1
+http://localhost:3000/consultas-peliculas/consulta2/Comedia
+http://localhost:3000/consultas-peliculas/consulta3
+http://localhost:3000/consultas-peliculas/consulta4/James Cameron
+http://localhost:3000/consultas-peliculas/consulta5/15
+http://localhost:3000/consultas-peliculas/consulta6/2022

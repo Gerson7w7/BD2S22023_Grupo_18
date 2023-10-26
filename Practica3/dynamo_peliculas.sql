@@ -29,7 +29,7 @@ dynamodb.scan(params2, (err, data) => {
 
 // Mostrar películas con una clasificación R (restringida) o superior.
 const params3 = {
-    TableName: 'peliculas', // Reemplaza 'peliculas' con el nombre de tu tabla en DynamoDB
+    TableName: 'peliculas',
     FilterExpression: 'Clasificacion = :clasificacion',
     ExpressionAttributeValues: { ':clasificacion': 'R' }
 };
