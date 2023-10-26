@@ -69,3 +69,7 @@ http://localhost:3000/consultas-peliculas/consulta3
 http://localhost:3000/consultas-peliculas/consulta4/James Cameron
 http://localhost:3000/consultas-peliculas/consulta5/15
 http://localhost:3000/consultas-peliculas/consulta6/2022
+http://localhost:3000/consultas-peliculas/consulta7
+http://localhost:3000/consultas-peliculas/consulta8/aventura
+http://localhost:3000/consultas-peliculas/consulta9
+http://localhost:3000/consultas-peliculas/consulta10
