@@ -101,7 +101,7 @@ juegoPorPlataforma("Call of Duty: Black Ops");
 // (subtítulos y audio) ordenados por rating, nombre y que idiomas soportan.
 
 
-db.createView("game_languages_view", "games", [
+db.createView("juego_lenguajes", "games", [
   {
     $unwind: "$language_support"
   },
@@ -130,6 +130,7 @@ db.createView("game_languages_view", "games", [
   },
   {
     $sort: {
+      numLanguages: -1,
       rating: -1,
       name: 1
     }
@@ -139,7 +140,7 @@ db.createView("game_languages_view", "games", [
   }
 ]);
 
-db.game_languages_view.find();
+db.juego_lenguajes.find();
 
 
 // ----------------------------------------- CONSULTA 5 -----------------------------------------
