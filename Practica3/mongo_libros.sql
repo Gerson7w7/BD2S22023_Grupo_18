@@ -11,7 +11,7 @@ db.Libro.find({ "Autor": "George Orwell" })
 db.Libro.find().sort({ "Calificacion": -1 })
 
 // Encontrar libros con un precio inferior a 20.
-db.Libro.find({ "Stock": { $lt: 30 } })
+db.Libro.find({ "Precio": { $lt: 30 } })
 
 // Buscar libros con una palabra clave en el título o descripción.
 db.Libro.find({
@@ -51,4 +51,19 @@ db.Libro.aggregate([
 ])
 
 // Información de todas las categorías.
-db.Libro.distinct("Categoria")
+db.Libro.aggregate([
+  {
+    $group: {
+      _id: "$Categoria",
+      libros: { $push: {
+          Titulo: "$Titulo",
+          Autor: "$Autor",
+          Descripcion: "$Descripcion",
+          FechaDePublicacion: "$FechaDePublicacion",
+          Calificacion: "$Calificacion",
+          Stock: "$Stock",
+          Precio: "$Precio",
+      }}
+    }
+  }
+])

@@ -64,12 +64,12 @@ http://localhost:3000/peliculas/eliminar/100
 
 GETS
 http://localhost:3000/consultas-peliculas/consulta1
-http://localhost:3000/consultas-peliculas/consulta2/Comedia
+http://localhost:3000/consultas-peliculas/consulta2/Animación
 http://localhost:3000/consultas-peliculas/consulta3
-http://localhost:3000/consultas-peliculas/consulta4/James Cameron
+http://localhost:3000/consultas-peliculas/consulta4/Roger Allers
 http://localhost:3000/consultas-peliculas/consulta5/15
 http://localhost:3000/consultas-peliculas/consulta6/2022
 http://localhost:3000/consultas-peliculas/consulta7
-http://localhost:3000/consultas-peliculas/consulta8/aventura
+http://localhost:3000/consultas-peliculas/consulta8/León
 http://localhost:3000/consultas-peliculas/consulta9
 http://localhost:3000/consultas-peliculas/consulta10
