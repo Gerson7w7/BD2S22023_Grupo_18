@@ -15,13 +15,12 @@ router.get("/consulta1", async (req, res) => {
     try {
         const params = {
             TableName: 'Peliculas',
-            ProjectionExpression: 'Titulo'
+            //ProjectionExpression: 'Titulo'
         };
         dynamoDocumentClient.scan(params, (err, data) => {
             if (err) {
                 res.status(500).json({ error: 'Error al obtener las peliculas.' });
             } else {
-                console.log("Títulos de películas disponibles:", data.Items);
                 res.json(data.Items);
             }
         });
@@ -70,7 +69,6 @@ router.get("/consulta3", async (req, res) => {
                 console.error("Error al escanear la tabla:", err);
                 res.status(500).json({ error: 'Error al obtener las peliculas.' });
             } else {
-                console.log("Películas con clasificación R o superior:", data.Items);
                 res.json(data.Items);
             }
         });
@@ -252,7 +250,6 @@ router.get("/consulta9", async (req, res) => {
                     res.status(200).json({mensaje:'No existen películas registradas.'})
                 } else {
                     const totalPrecios = items.reduce((sum, item) => sum + item.Precio, 0);
-                    console.log(totalPrecios)
                     const precioPromedio = totalPrecios / items.length;
                     res.status(200).json({PrecioPromedio: precioPromedio});
                 }
